@@ -1,0 +1,24 @@
+{
+  "name": "youtube-search-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "cd youtube-search-client && npm run build",
+    "install-client": "cd youtube-search-client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "start": "node app.js",
+    "client": "cd youtube-search-client && npm start"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.26.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.3",
+    "mongoose": "^6.2.2",
+    "morgan": "^1.10.0"
+  }
+}
